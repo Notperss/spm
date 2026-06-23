@@ -32,4 +32,6 @@ Route::middleware(['web', 'auth', 'update.activity', 'route_permission'])->group
         return view('home');
     })->name('dashboard.index');
 
+    Route::resource('location', App\Http\Controllers\MasterData\LocationController::class);
+
 });
